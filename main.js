@@ -5,31 +5,33 @@
     let second = document.querySelector(".second");
     
 function countDown(){
-    const future = new Date("feb 15, 2022");
+    const future = new Date("feb 13, 2022, 20:50:20");
     const now = new Date();
-    const dif = future - now; 
-
-    let months = Math.floor(dif/(1000*60*60*24*30));
-    let days = Math.floor(dif/(1000*60*60*24));
-    let hours = Math.floor(dif/(1000*60*60));
-    let minutes = Math.floor(dif/(1000*60));
-    let seconds = Math.floor(dif/(1000));
-
+    const dif = (future - now)/1000; 
+ 
+    let months = Math.floor(dif/(3600*24*30));
+    let days = Math.floor(dif%(3600*24*30)/(3600*24));
+    let hours = Math.floor((dif%(3600*24*30)%(3600*24))/3600);
+    let minutes = Math.floor(((dif%(3600*24*30)%(3600*24))%3600)/60);
+    let seconds = Math.floor(((dif%(3600*24*30)%(3600*24))%3600)%60);
+    //STOP
+    if (seconds=='0'){
+        clearInterval(start);
+    }
+    
+    month.innerHTML = formatTime(months) ;
+    day.innerHTML = formatTime(days) ;
+    hour.innerHTML = formatTime(hours) ;
+    minute.innerHTML = formatTime(minutes) ;
+    second.innerHTML = formatTime(seconds);
     
 
-    month.innerHTML = months;
-    day.innerHTML = days;
-    hour.innerHTML = hours;
-    minute.innerHTML = minutes;
-    second.innerHTML = seconds;
-
-    
 };
 let start = setInterval(countDown);
-// if (second.innerHTML <=0){
-//     clearInterval(start);
-// }
 
+function formatTime(time){
+    return time < 10 ? `0${time}` : time;
+}
 
 setInterval(function chnageColor(){
     color = "#";
