@@ -44,6 +44,17 @@ p{
     font-size: 55px;
     font-weight: bold;
 }
-span{
+/* span{
     color: rgb(56, 58, 29);
+} */
+
+.cancelMargin{
+    margin-right: 0;
+}
+
+@media all and (max-width:900px){
+    .elements{
+        display: flex;
+        flex-direction: column;
+    }
 }
