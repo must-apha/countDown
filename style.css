@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    background: url('background.jpg');    
+    font-family: 'Philosopher', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.begin{
+    margin-top: 50px;
+    font-size: 95px;
+    text-align: center;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: bold;
+}
+
+.counter{
+    font-size: 30px;
+    margin-top: 100px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    background-color: rgba(255, 255, 255, 0.781);
+    border-radius: 20px;
+}
+.elements{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.months-c{
+    margin-right: 40px;
+    text-align: center;
+    font-size: 50px;
+}
+
+p{
+    font-size: 55px;
+    font-weight: bold;
+}
+span{
+    color: rgb(56, 58, 29);
+}
