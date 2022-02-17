@@ -5,7 +5,7 @@
     let second = document.querySelector(".second");
     
 function countDown(){
-    const future = new Date("feb 13, 2022, 20:50:20");
+    const future = new Date("jun 13, 2022, 20:50:20");
     const now = new Date();
     const dif = (future - now)/1000; 
  
