@@ -15,7 +15,7 @@ function countDown(){
     let minutes = Math.floor(((dif%(3600*24*30)%(3600*24))%3600)/60);
     let seconds = Math.floor(((dif%(3600*24*30)%(3600*24))%3600)%60);
     //STOP
-    if (seconds=='0'){
+    if (seconds=='0' && minutes=='0' && hours=='0' && days=='0' && months=='0'){
         clearInterval(start);
     }
     
